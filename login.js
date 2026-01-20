@@ -37,10 +37,6 @@ submitBtn.addEventListener("click", async () => {
         }
 } else if (currentStep === "askPassword") {
     const password1 = input;
-
-
-
-
     
    const password1 = input;
     if (username === "student" && password1 === "123456") {
@@ -54,7 +50,6 @@ submitBtn.addEventListener("click", async () => {
         await sleep(1500);
         print("Refresh page and try again.");
     }
-
 
     currentStep = "end";
 
