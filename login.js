@@ -23,4 +23,23 @@ submitBtn.addEventListner("click", async () =>{
     }else{
       print("Incorrect username. Please refresh page and try again.");
       currentStep="end";
+    }
+  } else if(currentStep==="askPassword"){
+      const password1=input;
+      if(username==="student" && password1==="123456"){
+          print("You are logged in as a Student.");
+          document.getElementByld("main-link").style.display="block";
+      }else if (username==="teacher" && password1==="querty"){
+          print (You are logged in as a teacher");
+           document.getElementByld("main-link").style.display="block";
+      }else{
+          print("incorrect password");
+          await sleep(1500);
+          print("Refresh page and try again");
+      }
+      currentStep="end";
+  }else of (curentStep==="end"){
+      print("Session finished. Refresh page to try again");
+  });
+print("Log-in Page \n\nWelcome! Please enter your username:");
       
