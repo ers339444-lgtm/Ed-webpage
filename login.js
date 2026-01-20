@@ -19,7 +19,6 @@ submitBtn.addEventListener("click", async () => {
     const input = userInput.value.trim();
     userInput.value = "";
 
-    userInput.value = "";
     if (currentStep === "askUsername") {
         username = input;
 
