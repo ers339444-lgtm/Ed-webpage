@@ -2,13 +2,11 @@ const gameText = document.getElementById('game-text2');
 const userInput = document.getElementById('user-input2');
 const submitBtn = document.getElementById('submit-btn2');
 
-// Print to the screen
 function print(text) {
     gameText.innerText += text + "\n";
     gameText.scrollTop = gameText.scrollHeight;
 }
 
-// Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -16,13 +14,12 @@ function sleep(ms) {
 let currentStep = "askUsername";
 let username = "";
 
-// Button click handler
+
 submitBtn.addEventListener("click", async () => {
     const input = userInput.value.trim();
     userInput.value = "";
 
 
-    // STEP 1 → Ask username
     if (currentStep === "askUsername") {
         username = input;
 
@@ -36,7 +33,6 @@ submitBtn.addEventListener("click", async () => {
             currentStep = "end";
         }
 
-    // STEP 2 → Ask password
 } else if (currentStep === "askPassword") {
     const password1 = input;
 
@@ -54,12 +50,9 @@ submitBtn.addEventListener("click", async () => {
 
     currentStep = "end";
 
-
-    // END → Game is finished
     } else if (currentStep === "end") {
         print("Session finished. Refresh page to try again.");
     }
 });
 
-// Start text
 print("Log-in Page \n\nWelcome! Please enter your username:");
